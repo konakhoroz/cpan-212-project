@@ -79,8 +79,8 @@ h2 a {
 }
 
 h2 a:hover {
-  text-decoration: underline;        /* optional: underline on hover */
-  color: #ffd700;                    /* optional: IMDb-style gold hover */
+  text-decoration: underline;        
+  color: #ffd700;                   
 }
 a {
   
@@ -102,7 +102,7 @@ input[type="submit"] {
 
 
 
-/* Back button appearance (matches your theme) */
+/* Back button appearance  */
 .btn.btn-secondary a {
   color: white !important;
   text-decoration: none !important;

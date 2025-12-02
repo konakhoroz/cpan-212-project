@@ -1,31 +1,31 @@
 const mongoose = require("mongoose");
 
 const movieSchema = mongoose.Schema({
-    name: {              // converted from title -> name
+    name: {              
         type: String,
         required: true
     },
-    description: {       // new field instead of author
+    description: {       
         type: String,
         required: true
     },
-    year: {              // converted from pages -> year
+    year: {              
         type: Number,
         required: true
     },
-    genres: {            // same as before
+    genres: {            
         type: [String],
         required: true
     },
-    rating: {            // same as before
+    rating: {           
         type: Number,
         required: true
     },
-    posted_by: {         // track which user posted the movie
+    posted_by: {         
         type: mongoose.Schema.Types.ObjectId,
         ref: "User"
     },
-    date: {              // when the movie was added
+    date: {              
         type: Date,
         default: Date.now
     }
