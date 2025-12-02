@@ -1,0 +1,129 @@
+/* Overall dark theme */
+.content-wrapper {
+  background-color: #000; /* IMDb-like black */
+  color: #f5c518; /* IMDb yellow */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  margin-left: 10px;
+  padding: 0;
+}
+
+body {
+  background-color: #000; /* IMDb-like black */
+  color: #f5c518; /* IMDb yellow */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation bar styling */
+nav {
+  background-color: #121212;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+/* Links */
+nav a {
+  color: #f5c518;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+/* Button styles */
+button, .btn {
+  background-color: #f5c518;
+  color: black;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 3px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover,
+.btn:hover {
+  background-color: #d4a617;
+}
+
+/* Card-style content boxes */
+.card {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 20px 0;
+  color: white;
+}
+.card h2 {
+    margin-top: 0px; /* or any small value you prefer */
+    margin-bottom: 0px;
+}
+
+.btn.btn-secondary {
+  text-decoration: none !important;   /* remove underline */
+  margin-top: 0px; 
+  display: inline-block;
+  margin-bottom: 10px;                  /* spacing above */
+}
+
+.btn.btn-secondary:hover {
+  text-decoration: none !important;   /* keep no underline on hover */
+}
+h2 a {
+  color: white !important;           /* make movie titles white */
+  text-decoration: none !important;  /* remove underline */
+}
+
+h2 a:hover {
+  text-decoration: underline;        /* optional: underline on hover */
+  color: #ffd700;                    /* optional: IMDb-style gold hover */
+}
+a {
+  
+  text-decoration: none !important;
+}
+
+a:hover {
+  text-decoration: underline !important;
+}
+
+/* Space around submit buttons */
+button[type="submit"],
+input[type="submit"] {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  margin-right: 130px;
+  padding: 10px 18px;
+}
+
+
+
+/* Back button appearance (matches your theme) */
+.btn.btn-secondary a {
+  color: white !important;
+  text-decoration: none !important;
+  padding: 8px 14px;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+
+a.btn.delete-movie {
+
+    margin-right: 75px;
+    margin-left: 10px;
+}
+
+.card p.year{
+    margin-top: 2px;
+    margin-bottom: 0px;
+}
+
+.card p.rating{
+    margin-top: 2px;
+    
+}

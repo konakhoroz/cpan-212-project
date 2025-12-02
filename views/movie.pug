@@ -1,0 +1,26 @@
+extends layout
+
+block content
+    .card
+        h1= movie.name 
+        p Description: #{movie.description}
+        p Year: #{movie.year}
+        p Rating: ⭐#{movie.rating} /10
+        p Genres: 
+            = movie.genres.map(genre => genre.toLowerCase()).join(', ')
+
+        hr
+
+        //- Show who posted the movie to everyone
+        p Posted by: #{posted_by}
+
+        //- Show edit/delete only if logged in and owner
+        if user && movie.posted_by.toString() === user._id.toString()
+            a.btn.btn-default(href="/movies/edit/" + movie._id) Edit
+            a.btn.delete-movie(href="#", data-id=movie._id) Delete
+
+        //- Add a back button
+        a.btn.btn-secondary(href="/movies") Back
+
+    script(src="/js/main.js")
+

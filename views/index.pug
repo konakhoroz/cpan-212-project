@@ -1,0 +1,31 @@
+extends layout
+
+block content
+    if user
+        h3 Welcome back #{user.name}!
+
+    h1 Movie Records List
+
+    if movies.length === 0
+        p(style="color:gray; margin-top: 10px") No movies found.
+
+    each movie in movies
+        div.card
+            h2
+                a(href="/movies/" + movie._id)= movie.name
+            p.year #{movie.year}
+            p.rating ⭐#{movie.rating}
+                 
+
+
+            //- Edit/Delete buttons only if user owns the movie
+            if user && movie.posted_by && movie.posted_by.toString() === user._id.toString()
+                a.btn.btn-default(href="/movies/edit/" + movie._id) Edit
+                a.btn.delete-movie(href="#", data-id=movie._id) Delete
+
+    //- Delete JS
+    script(src="/js/main.js")
+
+
+
+

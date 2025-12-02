@@ -1,0 +1,34 @@
+extends layout
+
+block content
+    h1 Edit Movie
+
+    if errors
+        each error in errors
+            p(style="color:red") #{error.msg}
+
+    form(method="POST", action="/movies/edit/" + movie._id)
+        #form-group
+            label Name:
+            input.form-control(type="text", name="name", value=movie.name)
+
+        #form-group
+            label Description:
+            textarea.form-control(name="description")= movie.description
+
+        #form-group
+            label Year:
+            input.form-control(type="number", name="year", value=movie.year, min="1900", max="2099")
+
+        #form-group
+            label Genres:
+            for genre in genres
+                input.form-control(type="checkbox", name="genres", value=genre, checked=movie.genres.includes(genre))
+                label= genre
+
+        #form-group
+            label Rating (stars) (0-10):
+            input.form-control(type="number", name="rating", value=movie.rating, min="0", max="10", step="0.1")
+
+        input.btn.btn-primary(type="submit", value="Update")
+        a.btn.btn-secondary(href="/movies") Cancel
